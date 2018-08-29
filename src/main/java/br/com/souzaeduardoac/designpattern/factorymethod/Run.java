@@ -10,6 +10,14 @@ public class Run {
         Soda soda = null;
 
         System.out.println("Qual refrigerante você quer? (k / p)");
-//        int i = sc.nextInt()
+        int i = sc.nextInt();
+        soda = sodaFactory.makeSoda(i);
+
+        if (soda != null) run(soda);
+        else System.out.println("Não existe irmãozinho");
+    }
+
+    private static void run(Soda soda) {
+        soda.open();
     }
 }
