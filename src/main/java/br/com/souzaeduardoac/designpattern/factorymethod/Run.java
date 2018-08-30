@@ -9,12 +9,12 @@ public class Run {
         SodaFactory sodaFactory = new SodaFactory();
         Soda soda = null;
 
-        System.out.println("Qual refrigerante você quer? (k / p)");
-        int i = sc.nextInt();
-        soda = sodaFactory.makeSoda(i);
+        System.out.println("Which soda you want? (k / p)");
+        String typedValue = sc.next();
+        soda = sodaFactory.makeSoda(typedValue);
 
         if (soda != null) run(soda);
-        else System.out.println("Não existe irmãozinho");
+        else System.out.println("There is no such option");
     }
 
     private static void run(Soda soda) {
