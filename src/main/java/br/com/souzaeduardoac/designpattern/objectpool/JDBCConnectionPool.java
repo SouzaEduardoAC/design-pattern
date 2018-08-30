@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class JDBCConnectionPool extends ObejctPool<Connection> {
     private String dsn, usr, pwd;
 
-    public JDBCConnectionPool(String driver, String dsn, String usr, String pwd) {
+    JDBCConnectionPool(String driver, String dsn, String usr, String pwd) {
         super();
         try {
             Class.forName(driver).newInstance();
@@ -33,7 +33,7 @@ public class JDBCConnectionPool extends ObejctPool<Connection> {
     @Override
     public void expire(Connection o) {
         try {
-            ((Connection) o).close();
+            o.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -42,7 +42,7 @@ public class JDBCConnectionPool extends ObejctPool<Connection> {
     @Override
     public boolean validate(Connection o) {
         try {
-            return (!((Connection) o).isClosed());
+            return (!o.isClosed());
         } catch (SQLException e) {
             e.printStackTrace();
             return false;

@@ -1,7 +1,7 @@
 package br.com.souzaeduardoac.designpattern.factorymethod;
 
-public class Orange extends Soda {
-    public Orange() {
+class Orange extends Soda {
+    Orange() {
         setName("Phanta");
     }
 }

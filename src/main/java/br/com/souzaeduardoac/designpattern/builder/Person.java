@@ -39,7 +39,7 @@ class Person {
         this.isHomewOwner = newIsHomeOwner;
     }
 
-    public static class PersonBuilder {
+    static class PersonBuilder {
         private String nestedLastName;
         private String nestedFirstName;
         private String nestedMiddleName;
@@ -52,7 +52,7 @@ class Person {
         private boolean nestedIsEmployed;
         private boolean nestedIsHomeOwner;
 
-        public PersonBuilder(
+        PersonBuilder(
                 final String newFirstName,
                 final String newCity,
                 final String newState) {
@@ -62,47 +62,47 @@ class Person {
             this.nestedState = newState;
         }
 
-        public PersonBuilder withLastName(String newLastName) {
+        PersonBuilder withLastName(String newLastName) {
             this.nestedLastName = newLastName;
             return this;
         }
 
-        public PersonBuilder withMiddleName(String newMiddleName) {
+        PersonBuilder withMiddleName(String newMiddleName) {
             this.nestedMiddleName = newMiddleName;
             return this;
         }
 
-        public PersonBuilder withSalutation(String newSalutation) {
+        PersonBuilder withSalutation(String newSalutation) {
             this.nestedSalutation = newSalutation;
             return this;
         }
 
-        public PersonBuilder withSuffix(String newSuffix) {
+        PersonBuilder withSuffix(String newSuffix) {
             this.nestedSuffix = newSuffix;
             return this;
         }
 
-        public PersonBuilder withStreetAddress(String newStreetAddress) {
+        PersonBuilder withStreetAddress(String newStreetAddress) {
             this.nestedStreetAddress = newStreetAddress;
             return this;
         }
 
-        public PersonBuilder isFemale(boolean newIsFemale) {
+        PersonBuilder isFemale(boolean newIsFemale) {
             this.nestedIsFemale = newIsFemale;
             return this;
         }
 
-        public PersonBuilder isEmployed(boolean newIsEmployed) {
+        PersonBuilder isEmployed(boolean newIsEmployed) {
             this.nestedIsEmployed = newIsEmployed;
             return this;
         }
 
-        public PersonBuilder isHomeOwner(boolean newIsHomeOwner) {
+        PersonBuilder isHomeOwner(boolean newIsHomeOwner) {
             this.nestedIsHomeOwner = newIsHomeOwner;
             return this;
         }
 
-        public Person createPerson() {
+        Person createPerson() {
             return new Person(nestedLastName,
                     nestedFirstName,
                     nestedMiddleName,

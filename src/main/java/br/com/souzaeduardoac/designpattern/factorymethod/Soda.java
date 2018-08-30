@@ -7,11 +7,11 @@ public abstract class Soda {
         return name;
     }
 
-    public void setName(String name) {
+    void setName(String name) {
         this.name = name;
     }
 
-    public void open() {
+    void open() {
         System.out.println("You openned a can of " + this.name);
     }
 }
