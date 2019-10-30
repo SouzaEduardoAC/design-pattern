@@ -1,7 +1,6 @@
-package br.com.souzaeduardoac.designpattern.structural.adapter;
+package br.com.souzaeduardoac.designpattern.structural.composite;
 
-class Flashlight {
-
+final class Flashlight {
     private Battery firstBattery;
     private Battery secondBattery;
 
@@ -14,6 +13,15 @@ class Flashlight {
 
         this.firstBattery = b1;
         this.secondBattery = b2;
+    }
+
+    Battery[] removeBatteries() {
+        Battery[] batteries = { this.firstBattery, this.secondBattery };
+
+        this.firstBattery = null;
+        this.secondBattery = null;
+
+        return batteries;
     }
 
     private boolean hasBatteries() {

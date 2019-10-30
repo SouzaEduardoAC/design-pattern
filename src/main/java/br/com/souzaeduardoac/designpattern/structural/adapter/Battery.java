@@ -1,5 +1,5 @@
 package br.com.souzaeduardoac.designpattern.structural.adapter;
 
-public interface Battery {
+interface Battery {
     void energize();
 }
