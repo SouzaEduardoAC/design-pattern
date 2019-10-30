@@ -1,4 +1,4 @@
-package br.com.souzaeduardoac.designpattern.behavioral.template;
+package br.com.souzaeduardoac.designpattern.behavioral.templatemethod;
 
 import java.util.Calendar;
 
